@@ -1,0 +1,209 @@
+---
+- suite: spades
+  value: 1
+  image: Ace of Spades.png
+  name: Ace of Spades
+- suite: spades
+  value: 2
+  image: Two of Spades.png
+  name: Two of Spades
+- suite: spades
+  value: 3
+  image: Three of Spades.png
+  name: Three of Spades
+- suite: spades
+  value: 4
+  image: Four of Spades.png
+  name: Four of Spades
+- suite: spades
+  value: 5
+  image: Five of Spades.png
+  name: Five of Spades
+- suite: spades
+  value: 6
+  image: Six of Spades.png
+  name: Six of Spades
+- suite: spades
+  value: 7
+  image: Seven of Spades.png
+  name: Seven of Spades
+- suite: spades
+  value: 8
+  image: Eight of Spades.png
+  name: Eight of Spades
+- suite: spades
+  value: 9
+  image: Nine of Spades.png
+  name: Nine of Spades
+- suite: spades
+  value: 10
+  image: Ten of Spades.png
+  name: Ten of Spades
+- suite: spades
+  value: 11
+  image: Jack of Spades.png
+  name: Jack of Spades
+- suite: spades
+  value: 12
+  image: Queen of Spades.png
+  name: Queen of Spades
+- suite: spades
+  value: 13
+  image: King of Spades.png
+  name: King of Spades
+- suite: hearts
+  value: 1
+  image: Ace of Hearts.png
+  name: Ace of Hearts
+- suite: hearts
+  value: 2
+  image: Two of Hearts.png
+  name: Two of Hearts
+- suite: hearts
+  value: 3
+  image: Three of Hearts.png
+  name: Three of Hearts
+- suite: hearts
+  value: 4
+  image: Four of Hearts.png
+  name: Four of Hearts
+- suite: hearts
+  value: 5
+  image: Five of Hearts.png
+  name: Five of Hearts
+- suite: hearts
+  value: 6
+  image: Six of Hearts.png
+  name: Six of Hearts
+- suite: hearts
+  value: 7
+  image: Seven of Hearts.png
+  name: Seven of Hearts
+- suite: hearts
+  value: 8
+  image: Eight of Hearts.png
+  name: Eight of Hearts
+- suite: hearts
+  value: 9
+  image: Nine of Hearts.png
+  name: Nine of Hearts
+- suite: hearts
+  value: 10
+  image: Ten of Hearts.png
+  name: Ten of Hearts
+- suite: hearts
+  value: 11
+  image: Jack of Hearts.png
+  name: Jack of Hearts
+- suite: hearts
+  value: 12
+  image: Queen of Hearts.png
+  name: Queen of Hearts
+- suite: hearts
+  value: 13
+  image: King of Hearts.png
+  name: King of Hearts
+- suite: clubs
+  value: 1
+  image: Ace of Clubs.png
+  name: Ace of Clubs
+- suite: clubs
+  value: 2
+  image: Two of Clubs.png
+  name: Two of Clubs
+- suite: clubs
+  value: 3
+  image: Three of Clubs.png
+  name: Three of Clubs
+- suite: clubs
+  value: 4
+  image: Four of Clubs.png
+  name: Four of Clubs
+- suite: clubs
+  value: 5
+  image: Five of Clubs.png
+  name: Five of Clubs
+- suite: clubs
+  value: 6
+  image: Six of Clubs.png
+  name: Six of Clubs
+- suite: clubs
+  value: 7
+  image: Seven of Clubs.png
+  name: Seven of Clubs
+- suite: clubs
+  value: 8
+  image: Eight of Clubs.png
+  name: Eight of Clubs
+- suite: clubs
+  value: 9
+  image: Nine of Clubs.png
+  name: Nine of Clubs
+- suite: clubs
+  value: 10
+  image: Ten of Clubs.png
+  name: Ten of Clubs
+- suite: clubs
+  value: 11
+  image: Jack of Clubs.png
+  name: Jack of Clubs
+- suite: clubs
+  value: 12
+  image: Queen of Clubs.png
+  name: Queen of Clubs
+- suite: clubs
+  value: 13
+  image: King of Clubs.png
+  name: King of Clubs
+- suite: diamonds
+  value: 1
+  image: Ace of Diamonds.png
+  name: Ace of Diamonds
+- suite: diamonds
+  value: 2
+  image: Two of Diamonds.png
+  name: Two of Diamonds
+- suite: diamonds
+  value: 3
+  image: Three of Diamonds.png
+  name: Three of Diamonds
+- suite: diamonds
+  value: 4
+  image: Four of Diamonds.png
+  name: Four of Diamonds
+- suite: diamonds
+  value: 5
+  image: Five of Diamonds.png
+  name: Five of Diamonds
+- suite: diamonds
+  value: 6
+  image: Six of Diamonds.png
+  name: Six of Diamonds
+- suite: diamonds
+  value: 7
+  image: Seven of Diamonds.png
+  name: Seven of Diamonds
+- suite: diamonds
+  value: 8
+  image: Eight of Diamonds.png
+  name: Eight of Diamonds
+- suite: diamonds
+  value: 9
+  image: Nine of Diamonds.png
+  name: Nine of Diamonds
+- suite: diamonds
+  value: 10
+  image: Ten of Diamonds.png
+  name: Ten of Diamonds
+- suite: diamonds
+  value: 11
+  image: Jack of Diamonds.png
+  name: Jack of Diamonds
+- suite: diamonds
+  value: 12
+  image: Queen of Diamonds.png
+  name: Queen of Diamonds
+- suite: diamonds
+  value: 13
+  image: King of Diamonds.png
+  name: King of Diamonds
