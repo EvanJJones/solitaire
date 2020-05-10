@@ -17,7 +17,7 @@ const CardArea = ({cardArray, columns, length}) => {
     setColumnArray(newColumnArray);
   }, [cardArray, columns, length])
   return (
-    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
+    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "80%", margin: "auto"}}>
       {columnArray && columnArray.map((cardColumnArray, index) => {
         return <CardColumn key={index} cardArray={cardColumnArray} />
       })}

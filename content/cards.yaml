@@ -4,258 +4,310 @@
   image: Ace of Spades.png
   name: Ace of Spades
   active: false
+  id: s1
 - suite: spades
   value: 2
   image: Two of Spades.png
   name: Two of Spades
   active: false
+  id: s2
 - suite: spades
   value: 3
   image: Three of Spades.png
   name: Three of Spades
   active: false
+  id: s3
 - suite: spades
   value: 4
   image: Four of Spades.png
   name: Four of Spades
   active: false
+  id: s4
 - suite: spades
   value: 5
   image: Five of Spades.png
   name: Five of Spades
   active: false
+  id: s5
 - suite: spades
   value: 6
   image: Six of Spades.png
   name: Six of Spades
   active: false
+  id: s6
 - suite: spades
   value: 7
   image: Seven of Spades.png
   name: Seven of Spades
   active: false
+  id: s7
 - suite: spades
   value: 8
   image: Eight of Spades.png
   name: Eight of Spades
   active: false
+  id: s8
 - suite: spades
   value: 9
   image: Nine of Spades.png
   name: Nine of Spades
   active: false
+  id: s9
 - suite: spades
   value: 10
   image: Ten of Spades.png
   name: Ten of Spades
   active: false
+  id: s10
 - suite: spades
   value: 11
   image: Jack of Spades.png
   name: Jack of Spades
   active: false
+  id: s11
 - suite: spades
   value: 12
   image: Queen of Spades.png
   name: Queen of Spades
   active: false
+  id: s12
 - suite: spades
   value: 13
   image: King of Spades.png
   name: King of Spades
   active: false
+  id: s13
 - suite: hearts
   value: 1
   image: Ace of Hearts.png
   name: Ace of Hearts
   active: false
+  id: h1
 - suite: hearts
   value: 2
   image: Two of Hearts.png
   name: Two of Hearts
   active: false
+  id: h2
 - suite: hearts
   value: 3
   image: Three of Hearts.png
   name: Three of Hearts
   active: false
+  id: h3
 - suite: hearts
   value: 4
   image: Four of Hearts.png
   name: Four of Hearts
   active: false
+  id: h4
 - suite: hearts
   value: 5
   image: Five of Hearts.png
   name: Five of Hearts
   active: false
+  id: h5
 - suite: hearts
   value: 6
   image: Six of Hearts.png
   name: Six of Hearts
   active: false
+  id: h6
 - suite: hearts
   value: 7
   image: Seven of Hearts.png
   name: Seven of Hearts
   active: false
+  id: h7
 - suite: hearts
   value: 8
   image: Eight of Hearts.png
   name: Eight of Hearts
   active: false
+  id: h8
 - suite: hearts
   value: 9
   image: Nine of Hearts.png
   name: Nine of Hearts
   active: false
+  id: h9
 - suite: hearts
   value: 10
   image: Ten of Hearts.png
   name: Ten of Hearts
   active: false
+  id: h10
 - suite: hearts
   value: 11
   image: Jack of Hearts.png
   name: Jack of Hearts
   active: false
+  id: h11
 - suite: hearts
   value: 12
   image: Queen of Hearts.png
   name: Queen of Hearts
   active: false
+  id: h12
 - suite: hearts
   value: 13
   image: King of Hearts.png
   name: King of Hearts
   active: false
+  id: h13
 - suite: clubs
   value: 1
   image: Ace of Clubs.png
   name: Ace of Clubs
   active: false
+  id: c1
 - suite: clubs
   value: 2
   image: Two of Clubs.png
   name: Two of Clubs
   active: false
+  id: c2
 - suite: clubs
   value: 3
   image: Three of Clubs.png
   name: Three of Clubs
   active: false
+  id: c3
 - suite: clubs
   value: 4
   image: Four of Clubs.png
   name: Four of Clubs
   active: false
+  id: c4
 - suite: clubs
   value: 5
   image: Five of Clubs.png
   name: Five of Clubs
   active: false
+  id: c5
 - suite: clubs
   value: 6
   image: Six of Clubs.png
   name: Six of Clubs
   active: false
+  id: c6
 - suite: clubs
   value: 7
   image: Seven of Clubs.png
   name: Seven of Clubs
   active: false
+  id: c7
 - suite: clubs
   value: 8
   image: Eight of Clubs.png
   name: Eight of Clubs
   active: false
+  id: c8
 - suite: clubs
   value: 9
   image: Nine of Clubs.png
   name: Nine of Clubs
   active: false
+  id: c9
 - suite: clubs
   value: 10
   image: Ten of Clubs.png
   name: Ten of Clubs
   active: false
+  id: c10
 - suite: clubs
   value: 11
   image: Jack of Clubs.png
   name: Jack of Clubs
   active: false
+  id: c11
 - suite: clubs
   value: 12
   image: Queen of Clubs.png
   name: Queen of Clubs
   active: false
+  id: c12
 - suite: clubs
   value: 13
   image: King of Clubs.png
   name: King of Clubs
   active: false
+  id: c13
 - suite: diamonds
   value: 1
   image: Ace of Diamonds.png
   name: Ace of Diamonds
   active: false
+  id: d1
 - suite: diamonds
   value: 2
   image: Two of Diamonds.png
   name: Two of Diamonds
   active: false
+  id: d2
 - suite: diamonds
   value: 3
   image: Three of Diamonds.png
   name: Three of Diamonds
   active: false
+  id: d3
 - suite: diamonds
   value: 4
   image: Four of Diamonds.png
   name: Four of Diamonds
   active: false
+  id: d4
 - suite: diamonds
   value: 5
   image: Five of Diamonds.png
   name: Five of Diamonds
   active: false
+  id: d5
 - suite: diamonds
   value: 6
   image: Six of Diamonds.png
   name: Six of Diamonds
   active: false
+  id: d6
 - suite: diamonds
   value: 7
   image: Seven of Diamonds.png
   name: Seven of Diamonds
   active: false
+  id: d7
 - suite: diamonds
   value: 8
   image: Eight of Diamonds.png
   name: Eight of Diamonds
   active: false
+  id: d8
 - suite: diamonds
   value: 9
   image: Nine of Diamonds.png
   name: Nine of Diamonds
   active: false
+  id: d9
 - suite: diamonds
   value: 10
   image: Ten of Diamonds.png
   name: Ten of Diamonds
   active: false
+  id: d10
 - suite: diamonds
   value: 11
   image: Jack of Diamonds.png
   name: Jack of Diamonds
   active: false
+  id: d11
 - suite: diamonds
   value: 12
   image: Queen of Diamonds.png
   name: Queen of Diamonds
   active: false
+  id: d12
 - suite: diamonds
   value: 13
   image: King of Diamonds.png
   name: King of Diamonds
   active: false
+  id: d13
