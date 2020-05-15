@@ -15,18 +15,28 @@ const CardColumn = ({cardArray, playerCard, changeActiveCard}) => {
 
 
   const cardClicked = (card) => {
+    console.log(card);
+    console.log(playerCard);
     if (card.value === playerCard.value + 1 || card.value === playerCard.value - 1 && activeCard === card.id) {
+      correctMove(card);
+      
+    } else if (card.value === 1 && playerCard.value === 13 && activeCard === card.id ) {
+      correctMove(card);
+    } else if (card.value === 13 && playerCard.value === 1 && activeCard === card.id ) {
+      correctMove(card);
+    } else {
+      console.log("Wrong")
+    }
+  }
 
-      const filtered = currentCardArray.filter(item => item.id !== activeCard)
+  const correctMove = (card) => {
+    const filtered = currentCardArray.filter(item => item.id !== activeCard)
       setCurrentCardArray(filtered)
       
       if (filtered.length)
         setActiveCard(filtered[filtered.length -1].id);
       
       changeActiveCard(card);
-    } else {
-      console.log("Wrong")
-    }
   }
 
   return (
