@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import Card from "../components/Card"
 
 
-const CardColumn = ({cardArray}) => {
+const CardColumn = ({cardArray, playerCard, changeActiveCard}) => {
   const [activeCard, setActiveCard] = useState();
   const [currentCardArray, setCurrentCardArray] = useState();
 
@@ -11,12 +11,19 @@ const CardColumn = ({cardArray}) => {
     setCurrentCardArray(cardArray);
     setActiveCard(cardArray[cardArray.length -1].id);
     console.log(cardArray[cardArray.length -1].id)
-  }, [])
+  }, [cardArray])
 
-  const cardClicked = (id, value) => {
-    console.log(id, value)
-    if (activeCard === id) {
-      setCurrentCardArray(currentCardArray.filter(item => item.id !== activeCard))
+
+  const cardClicked = (card) => {
+    if (card.value === playerCard.value + 1 || card.value === playerCard.value - 1 && activeCard === card.id) {
+
+      const filtered = currentCardArray.filter(item => item.id !== activeCard)
+      setCurrentCardArray(filtered)
+      
+      if (filtered.length)
+        setActiveCard(filtered[filtered.length -1].id);
+      
+      changeActiveCard(card);
     } else {
       console.log("Wrong")
     }

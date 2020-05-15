@@ -2,9 +2,14 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -208,6 +213,9 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 img {
   max-width: 100%;
@@ -619,4 +627,9 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+#___gatsby, #gatsby-focus-wrapper {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }

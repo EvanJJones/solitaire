@@ -5,6 +5,7 @@ import cardList from "../../content/cards.yaml"
 
 const GamePage = () => {
   const [shuffledCards, setShuffledCards] = useState();
+  const [boardArray] = useState([5, 5, 5, 5, 5, 5, 5]);
 
   useEffect(() => {
     const shuffle = (array) => {
@@ -22,7 +23,7 @@ const GamePage = () => {
 
   return (
     <>
-      {shuffledCards && <CardArea cardArray={shuffledCards} columns={7} length={5} />}
+      {shuffledCards && <CardArea cardArray={shuffledCards} columns={7} length={5} boardArray={boardArray} />}
     </>
   )
 }
