@@ -2,27 +2,25 @@ import React, {useEffect, useState} from "react"
 import Card from "../components/Card"
 
 
-const CardColumn = ({cardArray, playerCard, changeActiveCard}) => {
-  const [activeCard, setActiveCard] = useState();
+const CardColumn = ({cardArray, playerCard, changeActiveCard, position, setTopCardObject}) => {
+  const [topCard, setTopCard] = useState();
   const [currentCardArray, setCurrentCardArray] = useState();
 
   useEffect(() => {
     //initial set length of columns
     setCurrentCardArray(cardArray);
-    setActiveCard(cardArray[cardArray.length -1].id);
-    console.log(cardArray[cardArray.length -1].id)
+    setTopCard(cardArray[cardArray.length -1].id);
+    setTopCardObject(cardArray[cardArray.length -1].value, position)
   }, [cardArray])
 
 
   const cardClicked = (card) => {
-    console.log(card);
-    console.log(playerCard);
-    if (card.value === playerCard.value + 1 || card.value === playerCard.value - 1 && activeCard === card.id) {
+    if (card.value === playerCard.value + 1 || card.value === playerCard.value - 1 && topCard === card.id) {
       correctMove(card);
       
-    } else if (card.value === 1 && playerCard.value === 13 && activeCard === card.id ) {
+    } else if (card.value === 1 && playerCard.value === 13 && topCard === card.id ) {
       correctMove(card);
-    } else if (card.value === 13 && playerCard.value === 1 && activeCard === card.id ) {
+    } else if (card.value === 13 && playerCard.value === 1 && topCard === card.id ) {
       correctMove(card);
     } else {
       console.log("Wrong")
@@ -30,13 +28,19 @@ const CardColumn = ({cardArray, playerCard, changeActiveCard}) => {
   }
 
   const correctMove = (card) => {
-    const filtered = currentCardArray.filter(item => item.id !== activeCard)
+    const filtered = currentCardArray.filter(item => item.id !== topCard)
       setCurrentCardArray(filtered)
       
-      if (filtered.length)
-        setActiveCard(filtered[filtered.length -1].id);
+      if (filtered.length) {
+        setTopCard(filtered[filtered.length -1].id);
+        setTopCardObject(filtered[filtered.length -1].value, position)
+      } else {
+        setTopCardObject(-1, position);
+      }
+      
       
       changeActiveCard(card);
+      
   }
 
   return (

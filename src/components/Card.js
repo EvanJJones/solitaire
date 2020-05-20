@@ -5,6 +5,6 @@ const Card = ({cardObject, position, cardClicked}) => {
   useEffect(() => {
    
   }, [])
-return <img src={`/${cardObject.image}`} alt={cardObject.name} width="100px" height="140px" style={{ position: "absolute", zIndex: `${position}`, top: `${position * 25}px`}} onClick={() => cardClicked(cardObject)}/>
+return <img src={`/${cardObject.image}`} alt={cardObject.name} width="125px" height="175px" style={{ position: "absolute", zIndex: `${position}`, top: `${70 + (position * 25)}px`}} onClick={() => cardClicked(cardObject)}/>
 }
 export default Card
