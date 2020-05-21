@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 import CardColumn from "./CardColumn"
 import Modal from "./Modal"
 
@@ -138,12 +137,14 @@ const CardArea = ({
           }}
         >
           <h1>{remainingDrawCards}</h1>
-          <img
+          <motion.img
             src="/CardBack.png"
             onClick={() => drawCard()}
             alt="card back"
             width="125px"
             height="175px"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           />
           {activeCard && (
             <img
