@@ -632,6 +632,8 @@ pre tt:after {
 }
 #gatsby-focus-wrapper {
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 html, body, #___gatsby, #___gatsby>div {
   height: 100%;
