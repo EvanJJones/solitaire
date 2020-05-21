@@ -35,8 +35,6 @@ const CardArea = ({cardArray, columns, length, boardArray, updateRemaining}) => 
 
   useEffect(() => {
     checkMoves();
-    console.log('useeffect ran')
-    console.log(topCards)
   }, [topCards, activeCard])
 
   const drawCard = () => {
@@ -73,11 +71,13 @@ const CardArea = ({cardArray, columns, length, boardArray, updateRemaining}) => 
       }
     }
     setAvailableMoves(moveCount);
-    if (moveCount === 0 && remainingDrawCards === 0) {
+
+    if (moveCount === 0 && remainingDrawCards === 0 && remainingCards > 0) {
       console.log('you lose')
       setModalObject({isOpen: true, type: "lose"})
     }
   }
+
 
   const setTopCardObject = (value, position) => {
     const topObject = topCards;
