@@ -630,13 +630,8 @@ pre tt:after {
     font-size: 100%;
   }
 }
-html, body, #___gatsby, #gatsby-focus-wrapper {
-  margin: 0;
-  padding: 0;
+#gatsby-focus-wrapper {
   height: 100%;
-  width: 100%;
-  min-height: 1000px;
-  position: absolute;
 }
 html, body, #___gatsby, #___gatsby>div {
   height: 100%;
