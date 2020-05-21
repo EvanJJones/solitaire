@@ -26,7 +26,7 @@ const GamePage = () => {
   }
 
   return (
-    <div style={{backgroundColor: "#F5F2DF", height: "100vh", width: "100%"}}>
+    <div style={{backgroundColor: "#F5F2DF", height: "100vh", width: "100%", margin: "0"}}>
       <div style={{height: "50px", backgroundColor: "#CED893", display: "flex", flexDirection: "row", alignItems: "stretch", justifyContent: "space-around"}}>
         <h2 style={{color: "black", margin: ".5rem"}}>Golf Solitaire</h2>
         <h2 style={{margin: ".5rem"}}>{remainingCards}</h2>
