@@ -634,6 +634,8 @@ pre tt:after {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
+  position: absolute;
 }
 html, body, #___gatsby, #___gatsby>div {
   height: 100%;
