@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 
-const Modal = ({ isOpen, type }) => {
+const Modal = ({ isOpen, type, resetCards }) => {
   const [text, setText] = useState("Nothing yet")
 
   useEffect(() => {
@@ -36,6 +36,9 @@ const Modal = ({ isOpen, type }) => {
             }}
           >
             <h1>{text}</h1>
+            <button type="button" onClick={() => resetCards()}>
+              Reset
+            </button>
           </div>
         </div>
       )}

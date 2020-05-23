@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { motion } from "framer-motion"
 
-const Card = ({ cardObject, position, cardClicked }) => {
+const Card = ({ cardObject, position, cardClicked, scaleValue }) => {
   useEffect(() => {}, [])
   return (
     <motion.img
@@ -15,8 +15,8 @@ const Card = ({ cardObject, position, cardClicked }) => {
         top: `${70 + position * 25}px`,
       }}
       onClick={() => cardClicked(cardObject)}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: scaleValue }}
     />
   )
 }

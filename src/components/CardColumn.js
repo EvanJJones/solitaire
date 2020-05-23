@@ -63,6 +63,7 @@ const CardColumn = ({
               cardObject={card}
               position={index}
               cardClicked={cardClicked}
+              scaleValue={0.98}
             />
           )
         })}

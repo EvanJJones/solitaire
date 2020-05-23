@@ -7,18 +7,24 @@ const GamePage = () => {
   const [boardArray] = useState([4, 4, 4, 4, 4, 4, 4])
   const [remainingCards, setRemainingCards] = useState(0)
 
-  useEffect(() => {
-    const shuffle = array => {
-      for (let i = array.length - 1; i > 0; i -= 1) {
-        const j = Math.floor(Math.random() * (i + 1)) // random index from 0 to i
+  const shuffle = array => {
+    for (let i = array.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1)) // random index from 0 to i
 
-        // swap elements array[i] and array[j]
-        // eslint-disable-next-line no-param-reassign
-        ;[array[i], array[j]] = [array[j], array[i]]
-      }
+      // swap elements array[i] and array[j]
+      // eslint-disable-next-line no-param-reassign
+      ;[array[i], array[j]] = [array[j], array[i]]
     }
-    shuffle(cardList)
-    setShuffledCards(cardList)
+  }
+
+  const resetGame = () => {
+    const temp = [...cardList]
+    shuffle(temp)
+    setShuffledCards(temp)
+  }
+
+  useEffect(() => {
+    resetGame()
   }, [])
 
   const updateRemaining = num => {
@@ -46,6 +52,9 @@ const GamePage = () => {
         }}
       >
         <h2 style={{ color: "black", margin: ".5rem" }}>Golf Solitaire</h2>
+        <button type="button" onClick={() => resetGame()}>
+          Reset Game
+        </button>
         <h2 style={{ margin: ".5rem" }}>{remainingCards}</h2>
       </div>
       {shuffledCards && (
@@ -55,6 +64,7 @@ const GamePage = () => {
           length={5}
           boardArray={boardArray}
           updateRemaining={updateRemaining}
+          resetGame={resetGame}
         />
       )}
     </div>

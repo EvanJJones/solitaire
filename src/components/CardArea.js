@@ -9,6 +9,7 @@ const CardArea = ({
   length,
   boardArray,
   updateRemaining,
+  resetGame,
 }) => {
   const [columnArray, setColumnArray] = useState()
   const [activeCard, setActiveCard] = useState()
@@ -95,9 +96,24 @@ const CardArea = ({
     setTopCards(topObject)
   }
 
+  const resetCards = () => {
+    setColumnArray()
+    setActiveCard()
+    setRemainingCards(-1)
+    setRemainingDrawCards(-1)
+    setTopCards({})
+    setAvailableMoves(-1)
+    setModalObject({ isOpen: false, type: "win" })
+    resetGame()
+  }
+
   return (
     <>
-      <Modal isOpen={modalObject.isOpen} type={modalObject.type} />
+      <Modal
+        isOpen={modalObject.isOpen}
+        type={modalObject.type}
+        resetCards={resetCards}
+      />
       <div
         style={{
           display: "flex",
