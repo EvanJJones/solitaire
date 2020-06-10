@@ -48,7 +48,7 @@ const Modal = ({ isOpen, type, resetGame, finalTime }) => {
               </h1>
             )}
             <button
-              className="button"
+              className="modal-button"
               type="button"
               onClick={() => resetGame()}
             >

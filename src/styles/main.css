@@ -14,7 +14,7 @@ html, body, #___gatsby, #___gatsby>div {
   filter: drop-shadow(2px 2px 2px #222);
 }
 button {
-  background-color: rgb(87, 107, 98); /* Green */
+  background-color: #95575E; /* Green */
   border: none;
   color: white;
   padding: 10px 20px;
@@ -23,10 +23,14 @@ button {
   display: inline-block;
   font-size: 16px;
   transition-duration: 0.4s;
-  border: 2px solid rgb(87, 107, 98);
+  border: 2px solid #95575E;
   border-radius: 5px;
 }
-.button:hover {
+.button:hover, .modal-button:hover {
   background-color: #F5F2DF; 
   color: black;
+}
+.modal-button {
+  background-color: rgb(113, 168, 119); 
+  border-color: rgb(113, 168, 119);
 }
