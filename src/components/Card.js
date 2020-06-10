@@ -7,12 +7,13 @@ const Card = ({ cardObject, position, cardClicked, scaleValue }) => {
     <motion.img
       src={`/${cardObject.image}`}
       alt={cardObject.name}
+      className="card"
       width="125px"
       height="175px"
       style={{
         position: "absolute",
         zIndex: `${position}`,
-        top: `${70 + position * 25}px`,
+        top: `${70 + position * 30}px`,
       }}
       onClick={() => cardClicked(cardObject)}
       whileHover={{ scale: 1.02 }}

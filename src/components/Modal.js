@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
 
-const Modal = ({ isOpen, type, resetCards }) => {
+const Modal = ({ isOpen, type, resetGame, finalTime }) => {
   const [text, setText] = useState("Nothing yet")
 
   useEffect(() => {
+    console.log(finalTime)
     if (type === "win") {
       setText("You Win")
     } else {
@@ -33,11 +34,25 @@ const Modal = ({ isOpen, type, resetCards }) => {
               opacity: "1",
               textAlign: "center",
               padding: "15px",
+              border: "5px solid #CED893",
+              borderRadius: "25px",
             }}
           >
-            <h1>{text}</h1>
-            <button type="button" onClick={() => resetCards()}>
-              Reset
+            <h1 style={{ fontSize: "4rem", marginTop: "0" }}>{text}</h1>
+            {finalTime && (
+              <h1 style={{ color: "black" }}>
+                {finalTime.minutes}
+                <span style={{ color: "#3E4948" }}> Min </span>
+                {finalTime.seconds}
+                <span style={{ color: "#3E4948" }}> Sec</span>
+              </h1>
+            )}
+            <button
+              className="button"
+              type="button"
+              onClick={() => resetGame()}
+            >
+              Play Again
             </button>
           </div>
         </div>

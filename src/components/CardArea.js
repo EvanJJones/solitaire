@@ -10,6 +10,7 @@ const CardArea = ({
   boardArray,
   updateRemaining,
   resetGame,
+  gameOver,
 }) => {
   const [columnArray, setColumnArray] = useState()
   const [activeCard, setActiveCard] = useState()
@@ -17,12 +18,17 @@ const CardArea = ({
   const [remainingDrawCards, setRemainingDrawCards] = useState(-1)
   const [topCards, setTopCards] = useState({})
   const [availableMoves, setAvailableMoves] = useState(-1)
-  const [modalObject, setModalObject] = useState({
-    isOpen: false,
-    type: "lose",
-  })
 
   useEffect(() => {
+    const resetCards = () => {
+      setColumnArray()
+      setActiveCard()
+      setRemainingCards(-1)
+      setRemainingDrawCards(-1)
+      setTopCards({})
+      setAvailableMoves(-1)
+    }
+    resetCards()
     const newColumnArray = []
     let cardCount = 0
 
@@ -59,7 +65,7 @@ const CardArea = ({
     setRemainingCards(remainingCards - 1)
     updateRemaining(remainingCards - 1)
     if (remainingCards - 1 <= 0) {
-      setModalObject({ isOpen: true, type: "win" })
+      gameOver(true)
     }
   }
 
@@ -80,7 +86,7 @@ const CardArea = ({
     setAvailableMoves(moveCount)
 
     if (moveCount === 0 && remainingDrawCards === 0 && remainingCards > 0) {
-      setModalObject({ isOpen: true, type: "lose" })
+      gameOver(false)
     }
   }
 
@@ -96,24 +102,8 @@ const CardArea = ({
     setTopCards(topObject)
   }
 
-  const resetCards = () => {
-    setColumnArray()
-    setActiveCard()
-    setRemainingCards(-1)
-    setRemainingDrawCards(-1)
-    setTopCards({})
-    setAvailableMoves(-1)
-    setModalObject({ isOpen: false, type: "win" })
-    resetGame()
-  }
-
   return (
     <>
-      <Modal
-        isOpen={modalObject.isOpen}
-        type={modalObject.type}
-        resetCards={resetCards}
-      />
       <div
         style={{
           display: "flex",
@@ -152,26 +142,35 @@ const CardArea = ({
             justifyContent: "center",
           }}
         >
-          <h1>{remainingDrawCards}</h1>
-          <motion.img
-            src="/CardBack.png"
-            onClick={() => drawCard()}
-            alt="card back"
-            width="125px"
-            height="175px"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          />
-          {activeCard && (
-            <img
-              src={`/${activeCard.image}`}
-              alt={activeCard.name}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              textAlign: "center",
+            }}
+          >
+            <h1 style={{ margin: "0", padding: "0" }}>{remainingDrawCards}</h1>
+            <motion.img
+              src="/CardBack.png"
+              onClick={() => drawCard()}
+              alt="card back"
               width="125px"
               height="175px"
-              style={{ marginLeft: "40px" }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            />
+          </div>
+          {activeCard && (
+            <motion.img
+              src={`/${activeCard.image}`}
+              alt={activeCard.name}
+              className="card"
+              width="125px"
+              height="175px"
+              style={{ marginLeft: "40px", marginTop: "36px" }}
+              whileTap={{ rotate: 5 }}
             />
           )}
-          <h1>{availableMoves}</h1>
         </div>
       </div>
     </>
