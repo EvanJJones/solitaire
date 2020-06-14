@@ -34,3 +34,26 @@ button {
   background-color: rgb(113, 168, 119); 
   border-color: rgb(113, 168, 119);
 }
+.main-link {
+  background-color: #CED893;
+  height: 100px;
+  width: 50%;
+  border: 5px solid #CED893;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 5rem;
+  text-decoration: none;
+  font-size: 5rem;
+  color: rgb(0, 0, 0);
+}
+a {
+  text-decoration: none;
+}
+.bold-word {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-right: .5rem;
+}
+.rules-text {
+  margin-bottom: 1rem;
+}

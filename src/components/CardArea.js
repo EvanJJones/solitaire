@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import CardColumn from "./CardColumn"
-import Modal from "./Modal"
 
 const CardArea = ({
   cardArray,
@@ -9,7 +8,6 @@ const CardArea = ({
   length,
   boardArray,
   updateRemaining,
-  resetGame,
   gameOver,
 }) => {
   const [columnArray, setColumnArray] = useState()
@@ -17,7 +15,7 @@ const CardArea = ({
   const [remainingCards, setRemainingCards] = useState(-1)
   const [remainingDrawCards, setRemainingDrawCards] = useState(-1)
   const [topCards, setTopCards] = useState({})
-  const [availableMoves, setAvailableMoves] = useState(-1)
+  const [cardPileImage, setCardPileImage] = useState("/CardBack.png")
 
   useEffect(() => {
     const resetCards = () => {
@@ -26,7 +24,7 @@ const CardArea = ({
       setRemainingCards(-1)
       setRemainingDrawCards(-1)
       setTopCards({})
-      setAvailableMoves(-1)
+      setCardPileImage("/CardBack.png")
     }
     resetCards()
     const newColumnArray = []
@@ -83,7 +81,9 @@ const CardArea = ({
         moveCount += 1
       }
     }
-    setAvailableMoves(moveCount)
+    if (remainingDrawCards === 0) {
+      setCardPileImage("/BlankCard.png")
+    }
 
     if (moveCount === 0 && remainingDrawCards === 0 && remainingCards > 0) {
       gameOver(false)
@@ -151,7 +151,7 @@ const CardArea = ({
           >
             <h1 style={{ margin: "0", padding: "0" }}>{remainingDrawCards}</h1>
             <motion.img
-              src="/CardBack.png"
+              src={cardPileImage}
               onClick={() => drawCard()}
               alt="card back"
               width="125px"

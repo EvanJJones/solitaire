@@ -7,7 +7,7 @@ import Modal from "../components/Modal"
 
 const GamePage = () => {
   const [shuffledCards, setShuffledCards] = useState()
-  const [boardArray] = useState([4, 4, 4, 4, 4, 4, 4])
+  const [boardArray] = useState([5, 5, 5, 5, 5, 5, 5])
   const [remainingCards, setRemainingCards] = useState(0)
   const [timerStatus, setTimerStatus] = useState(false)
   const [finalTime, setFinalTime] = useState({ minutes: 0, seconds: 0 })
